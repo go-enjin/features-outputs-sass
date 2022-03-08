@@ -2,10 +2,8 @@ module github.com/go-enjin/third_party/features/outputs/sass
 
 go 1.17
 
-replace github.com/go-enjin/be => ./../../../../be
-
 require (
-	github.com/go-enjin/be v0.0.0-00010101000000-000000000000
+	github.com/go-enjin/be v0.0.0-20220308204746-70f9321b2598
 	github.com/tdewolff/parse/v2 v2.5.27
 	github.com/urfave/cli/v2 v2.3.0
 	github.com/wellington/go-libsass v0.9.2
@@ -41,13 +39,11 @@ require (
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
 	github.com/microcosm-cc/bluemonday v1.0.18 // indirect
 	github.com/niklasfasching/go-org v1.6.1 // indirect
-	github.com/onsi/ginkgo v1.16.5 // indirect
-	github.com/onsi/gomega v1.18.1 // indirect
+	github.com/nxadm/tail v1.4.8 // indirect
 	github.com/polds/logrus-papertrail-hook v0.0.0-20180214143432-bcfe7b72c1a4 // indirect
 	github.com/rogpeppe/go-internal v1.8.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
-	github.com/stvp/go-udp-testing v0.0.0-20201019212854-469649b16807 // indirect
 	github.com/x-cray/logrus-prefixed-formatter v0.5.2 // indirect
 	golang.org/x/crypto v0.0.0-20220214200702-86341886e292 // indirect
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
