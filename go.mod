@@ -3,7 +3,7 @@ module github.com/go-enjin/third_party/features/outputs/sass
 go 1.17
 
 require (
-	github.com/go-enjin/be v0.0.0-20220317193321-35f0bbd43f2d
+	github.com/go-enjin/be v0.0.0-20220322160247-935ba4723e61
 	github.com/tdewolff/parse/v2 v2.5.27
 	github.com/urfave/cli/v2 v2.4.0
 	github.com/wellington/go-libsass v0.9.2
@@ -46,9 +46,9 @@ require (
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/x-cray/logrus-prefixed-formatter v0.5.2 // indirect
 	github.com/yookoala/realpath v1.0.0 // indirect
-	golang.org/x/crypto v0.0.0-20220315160706-3147a52a75dd // indirect
+	golang.org/x/crypto v0.0.0-20220321153916-2c7772ba3064 // indirect
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
-	golang.org/x/sys v0.0.0-20220317061510-51cd9980dadf // indirect
+	golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8 // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
@@ -56,5 +56,5 @@ require (
 	gorm.io/driver/mysql v1.3.2 // indirect
 	gorm.io/driver/postgres v1.3.1 // indirect
 	gorm.io/driver/sqlite v1.3.1 // indirect
-	gorm.io/gorm v1.23.2 // indirect
+	gorm.io/gorm v1.23.3 // indirect
 )
