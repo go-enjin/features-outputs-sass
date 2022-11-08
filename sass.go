@@ -25,8 +25,6 @@ import (
 	"github.com/go-enjin/be/pkg/log"
 )
 
-var _sass *Feature
-
 var _ feature.Feature = (*Feature)(nil)
 
 var _ feature.OutputTranslator = (*Feature)(nil)
@@ -46,11 +44,9 @@ type MakeFeature interface {
 }
 
 func New() MakeFeature {
-	if _sass == nil {
-		_sass = new(Feature)
-		_sass.Init(_sass)
-	}
-	return _sass
+	f := new(Feature)
+	f.Init(f)
+	return f
 }
 
 func (f *Feature) IncludePaths(paths ...string) MakeFeature {
