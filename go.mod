@@ -1,9 +1,9 @@
 module github.com/go-enjin/features-outputs-sass
 
-go 1.19
+go 1.20
 
 require (
-	github.com/go-enjin/be v0.0.0-20230219164336-a489df8dbf44
+	github.com/go-enjin/be v0.0.0-20230306185847-fc7be4685066
 	github.com/tdewolff/parse/v2 v2.6.4
 	github.com/urfave/cli/v2 v2.14.1
 	github.com/wellington/go-libsass v0.9.2
@@ -39,12 +39,12 @@ require (
 	github.com/gabriel-vasile/mimetype v1.4.1 // indirect
 	github.com/gdamore/encoding v1.0.0 // indirect
 	github.com/go-chi/chi/v5 v5.0.7 // indirect
-	github.com/go-curses/cdk v0.5.13 // indirect
-	github.com/go-curses/ctk v0.5.4 // indirect
+	github.com/go-curses/cdk v0.5.14 // indirect
+	github.com/go-curses/ctk v0.5.6 // indirect
 	github.com/go-curses/term v1.2.2-gocurses.1 // indirect
 	github.com/go-curses/terminfo v1.0.0 // indirect
 	github.com/go-enjin/github-com-djherbis-times v0.0.0-20221101184323-aeef8854ee8a // indirect
-	github.com/go-enjin/golang-org-x-text v0.0.0-20221026190533-d0e9c4fd3b27 // indirect
+	github.com/go-enjin/golang-org-x-text v0.0.0-20230219204830-4f2b7b481f16 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/goccy/go-json v0.9.11 // indirect
 	github.com/gofrs/uuid v4.3.0+incompatible // indirect
@@ -91,7 +91,7 @@ require (
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	github.com/yookoala/realpath v1.0.0 // indirect
 	go.etcd.io/bbolt v1.3.5 // indirect
-	golang.org/x/crypto v0.0.0-20221012134737-56aed061732a // indirect
+	golang.org/x/crypto v0.6.0 // indirect
 	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/term v0.5.0 // indirect
