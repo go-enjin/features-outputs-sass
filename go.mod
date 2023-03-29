@@ -3,7 +3,7 @@ module github.com/go-enjin/features-outputs-sass
 go 1.20
 
 require (
-	github.com/go-enjin/be v0.0.0-20230320204704-f3f333993b18
+	github.com/go-enjin/be v0.0.0-20230329213325-0f826026eb3c
 	github.com/tdewolff/parse/v2 v2.6.4
 	github.com/urfave/cli/v2 v2.14.1
 	github.com/wellington/go-libsass v0.9.2
