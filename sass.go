@@ -25,54 +25,65 @@ import (
 	"github.com/go-enjin/be/pkg/log"
 )
 
-var _ feature.Feature = (*Feature)(nil)
+const Tag feature.Tag = "output-sass"
 
-var _ feature.OutputTranslator = (*Feature)(nil)
+var (
+	_ Feature     = (*CFeature)(nil)
+	_ MakeFeature = (*CFeature)(nil)
+)
 
-const Tag feature.Tag = "OutputSass"
+type Feature interface {
+	feature.Feature
+	feature.OutputTranslator
+}
 
-type Feature struct {
+type MakeFeature interface {
+	Make() Feature
+
+	IncludePaths(paths ...string) MakeFeature
+}
+
+type CFeature struct {
 	feature.CFeature
 
 	includePaths []string
 }
 
-type MakeFeature interface {
-	feature.MakeFeature
-
-	IncludePaths(paths ...string) MakeFeature
+func New() MakeFeature {
+	return NewTagged(Tag)
 }
 
-func New() MakeFeature {
-	f := new(Feature)
+func NewTagged(tag feature.Tag) MakeFeature {
+	f := new(CFeature)
 	f.Init(f)
+	f.FeatureTag = tag
 	return f
 }
 
-func (f *Feature) IncludePaths(paths ...string) MakeFeature {
+func (f *CFeature) IncludePaths(paths ...string) MakeFeature {
 	f.includePaths = append(f.includePaths, paths...)
 	return f
 }
 
-func (f *Feature) Tag() (tag feature.Tag) {
-	tag = Tag
+func (f *CFeature) Make() Feature {
+	return f
+}
+
+func (f *CFeature) Build(b feature.Buildable) (err error) {
 	return
 }
 
-func (f *Feature) Build(b feature.Buildable) (err error) {
+func (f *CFeature) Startup(ctx *cli.Context) (err error) {
+	err = f.CFeature.Startup(ctx)
 	return
 }
 
-func (f *Feature) Startup(ctx *cli.Context) (err error) {
-	return
-}
-
-func (f *Feature) CanTranslate(mime string) (ok bool) {
+func (f *CFeature) CanTranslate(mime string) (ok bool) {
 	ok = strings.Contains(mime, "text/x-scss")
 	return
 }
 
-func (f *Feature) TranslateOutput(s feature.Service, input []byte, _ string) (output []byte, mime string, err error) {
+func (f *CFeature) TranslateOutput(s feature.Service, input []byte, _ string) (output []byte, mime string, err error) {
 	o := buffer.NewWriter([]byte{})
 	r := buffer.NewReader(input)
 	var comp libsass.Compiler
